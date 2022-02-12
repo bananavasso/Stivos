@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Παγκόσμιο Πρωτάθλημα Στίβου 2019 – Έπταθλο γυναικών</title>
+        <link rel="stylesheet" href="VasilikiStavrou.css">
+        <link rel="manifest"  href="manifest.json">
+        <script src="index.js" defer></script>
+    </head>
+    <body>
+        <div class="header">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/DOH20250_hassan_10000m.jpg/270px-DOH20250_hassan_10000m.jpg" id="img1" alt="Διαγωνιζόμενοι στίβου" >
+            <div class="title" >
+                <h2 style="color: white;">ΠΑΓΚΟΣΜΙΟ ΠΡΩΤΑΘΛΗΜΑ ΣΤΙΒΟΥ 2019 – 100 ΜΕΤΡΑ ΓΥΝΑΙΚΩΝ</h2>
+                <p style="padding-top: 100px;">Τα 100 μέτρα γυναικών στο Παγκόσμιο Πρωτάθλημα Στίβου 2019 διεξάχθηκαν στο Διεθνές Στάδιο Καλίφα στις 28 και 29 Σεπτεμβρίου.</p>
+            </div>
+            
+        </div>
+
+
+        <p><br></p> 
+        
+        
+        <button class="add-button">Add to home screen</button>
+        
+        <input type = "button" id="buttonBest" onclick="show3better()"  value = "Tρεις καλύτεροι">
+        <input type = "button" id="buttonAll" onclick="showAll()"  value = "Αρχικός πίνακας">
+        
+        <p><br></p> 
+
+        <div id="checkbox_div">
+            <label>Show/Hide Column</label>
+            <li><input type="checkbox" value="hide" id="position_col" onchange="hide_show_table(this.id);">Position</li>
+            <li><input type="checkbox" value="hide" id="name_col" onchange="hide_show_table(this.id);">Name</li>
+            <li><input type="checkbox" value="hide" id="country_col" onchange="hide_show_table(this.id);">Country</li>
+            <li><input type="checkbox" value="hide" id="time_col" onchange="hide_show_table(this.id);">Time</li>
+        </div>
+        <p><br></p> 
+
+        <table class="uomTrack" id="myIDtable">
+           <thead>
+            <tr>
+                <th id="position_col_head" onclick="sortBy(0)">Θέση</th>
+                <th id="name_col_head" onclick="sortBy(1)">Όνομα</th>
+                <th id="country_col_head" onclick="sortBy(2)">Χώρα</th>
+                <th id="time_col_head" onclick="sortBy(3)">Χρόνος</th>
+               <th></th> 
+            </tr>
+           </thead> 
+           <tbody>
+            <tr id="row1">
+                <td class="position_col">1</td>
+                <td class="name_col" id="name1"><a href="https://el.wikipedia.org/wiki/%CE%A3%CE%AD%CE%BB%CE%B9-%CE%91%CE%BD_%CE%A6%CF%81%CE%AD%CE%B9%CE%B6%CE%B5%CF%81-%CE%A0%CF%81%CE%AC%CE%B9%CF%82">Σέλι-Αν Φρέιζερ-Πράις</a></td>
+                <td class="country_col" id="country1"><img alt="" src="https://flagworks.gr/wp-content/uploads/2020/05/TZAMAIKA-scaled.jpg"  width="22" height="11" > Τζαμάικα (JAM)</a>&#160;</td>
+                <td class="time_col" id="time1">10.71</td>
+                <td>
+                    <input type="button" id="edit_button1" value="Edit" class="edit" onclick="edit_row('1')">
+                    <input type="button" id="save_button1" value="Save" class="save" onclick="save_row('1')">
+                    <input type="button" value="Copy" class="Copy" onclick="addRow('1')">
+                    <input type="button" value="Delete" class="Delete" onclick="delete_row('1')">
+                </td>
+            </tr>
+            <tr id="row2">
+                <td class="position_col">2</td>
+                <td class="name_col" id="name2"><a href="https://el.wikipedia.org/wiki/%CE%9D%CF%84%CE%AF%CE%BD%CE%B1_%CE%86%CF%83%CE%B5%CF%81-%CE%A3%CE%BC%CE%B9%CE%B8">Ντίνα Άσερ-Σμιθ</a></td>
+                <td class="country_col" id="country2"><img alt="" src="https://www.falakras.gr/wp-content/uploads/2019/02/england.jpg"  width="22" height="11" > Μεγάλη Βρετανία (GBR)</a>&#160;</td>
+                <td class="time_col" id="time2">10.83</td>
+                <td>
+                    <input type="button" id="edit_button2" value="Edit" class="edit" onclick="edit_row('2')">
+                    <input type="button" id="save_button2" value="Save" class="save" onclick="save_row('2')">
+                    <input type="button" value="Copy" class="Copy" onclick="addRow('2')">
+                    <input type="button" value="Delete" class="Delete" onclick="delete_row('2')">
+                </td>
+            </tr>
+            <tr id="row3">
+                <td class="position_col">3</td>
+                <td class="name_col" id="name3"><a href="https://el.wikipedia.org/wiki/%CE%9C%CE%B1%CF%81%CE%AF-%CE%96%CE%BF%CE%B6%CE%AD_%CE%A4%CE%B1_%CE%9B%CE%BF%CF%85">Μαρί-Ζοζέ Τα Λου</a></td>
+                <td class="country_col" id="country3"><img alt="" src="https://www.geografikoi.gr/wp-content/uploads/2021/05/simaia-akti-elefantostou.png"  width="22" height="11" > Ακτή Ελεφαντοστού (CIV)</a>&#160;</td>
+                <td class="time_col" id="time3">10.90</td>
+                <td>
+                    <input type="button" id="edit_button3" value="Edit" class="edit" onclick="edit_row('3')">
+                    <input type="button" id="save_button3" value="Save" class="save" onclick="save_row('3')">
+                    <input type="button" value="Copy" class="Copy" onclick="addRow('3')">
+                    <input type="button" value="Delete" class="Delete" onclick="delete_row('3')">
+                </td>
+            </tr>
+            <tr id="row4">
+                <td class="position_col">4</td>
+                <td class="name_col" id="name4"><a href="https://el.wikipedia.org/wiki/%CE%95%CE%BB%CE%AD%CE%B9%CE%BD_%CE%A4%CF%8C%CE%BC%CF%83%CE%BF%CE%BD">Ελέιν Τόμσον</a></td>
+                <td class="country_col" id="country4"><img alt="" src="https://flagworks.gr/wp-content/uploads/2020/05/TZAMAIKA-scaled.jpg"  width="22" height="11" > Τζαμάικα (JAM)</a>&#160;</td>
+                <td class="time_col" id="time4">10.93</td>
+                <td>
+                    <input type="button" id="edit_button4" value="Edit" class="edit" onclick="edit_row('4')">
+                    <input type="button" id="save_button4" value="Save" class="save" onclick="save_row('4')">
+                    <input type="button" value="Copy" class="Copy" onclick="addRow('4')">
+                    <input type="button" value="Delete" class="Delete" onclick="delete_row('4')">
+                </td>
+            </tr>
+            <tr id="row5">
+                <td class="position_col">5</td>
+                <td class="name_col" id="name5">Μουριέλ Αουρέ</td>
+                <td class="country_col" id="country5"><img alt="" src="https://www.geografikoi.gr/wp-content/uploads/2021/05/simaia-akti-elefantostou.png"  width="22" height="11" > Ακτή Ελεφαντοστού (CIV)</a>&#160;</td>
+                <td class="time_col" id="time5">11.02</td>
+                <td>
+                    <input type="button" id="edit_button5" value="Edit" class="edit" onclick="edit_row('5')">
+                    <input type="button" id="save_button5" value="Save" class="save" onclick="save_row('5')">
+                    <input type="button" value="Copy" class="Copy" onclick="addRow('5')">
+                    <input type="button" value="Delete" class="Delete" onclick="delete_row('5')">
+                </td>
+            </tr>
+            <tr id="row6">
+                <td class="position_col">6</td>
+                <td class="name_col" id="name6">Τζονιέλ Σμιθ</td>
+                <td class="country_col" id="country6"><img alt="" src="https://flagworks.gr/wp-content/uploads/2020/05/TZAMAIKA-scaled.jpg"  width="22" height="11" > Τζαμάικα (JAM)</a>&#160;</td>
+                <td class="time_col" id="time6">11.06</td>
+                <td>
+                    <input type="button" id="edit_button6" value="Edit" class="edit" onclick="edit_row('6')">
+                    <input type="button" id="save_button6" value="Save" class="save" onclick="save_row('6')">
+                    <input type="button" value="Copy" class="Copy" onclick="addRow('6')">
+                    <input type="button" value="Delete" class="Delete" onclick="delete_row('6')">
+                </td>
+            </tr>
+            <tr id="row7">
+                <td class="position_col">7</td>
+                <td class="name_col" id="name7">Τιάνα Ντάνιελς</td>
+                <td class="country_col" id="country7"><img alt="" src="https://shared.zweikapitaene.me/image/imgHigh/Bandiera_USA.jpg"  width="22" height="11" > Ηνωμένες Πολιτείες (USA)</a>&#160;</td>
+                <td class="time_col" id="time7">11.19</td>
+                <td>
+                    <input type="button" id="edit_button7" value="Edit" class="edit" onclick="edit_row('7')">
+                    <input type="button" id="save_button7" value="Save" class="save" onclick="save_row('7')">
+                    <input type="button" value="Copy" class="Copy" onclick="addRow('7')">
+                    <input type="button" value="Delete" class="Delete" onclick="delete_row('7')">
+                </td>
+            </tr>
+            <tr id="row8">
+                <td class="position_col">8</td>
+                <td class="name_col" id="name8"><a href="https://el.wikipedia.org/wiki/%CE%9D%CF%84%CE%AC%CF%86%CE%BD%CE%B9_%CE%A3%CF%87%CE%AF%CF%80%CE%B5%CF%81%CF%82">Ντάφνι Σχίπερς</a></td>
+                <td class="country_col" id="country8"><img alt="" src="https://c.scdn.gr/images/sku_main_images/028131/28131918/20210407102554_simaia_ollandias_20x30cm_10965.jpeg"  width="22" height="11" > Ολλανδία (NED)</a>&#160;</td>
+                <td class="time_col" id="time8">11.35</td>
+                <td>
+                    <input type="button" id="edit_button8" value="Edit" class="edit" onclick="edit_row('8')">
+                    <input type="button" id="save_button8" value="Save" class="save" onclick="save_row('8')">
+                    <input type="button" value="Copy" class="Copy" onclick="addRow('8')">
+                    <input type="button" value="Delete" class="Delete" onclick="delete_row('8')">
+                </td>
+            </tr>
+           </tbody>
+
+           <tfoot>
+              <tr>
+                  <td colspan="4"><span id="f1"></span>&emsp;&emsp; <span id="f2"></span>&emsp;&emsp; <span id="f3"></span></td>
+              </tr>                           
+           </tfoot>
+
+        </table>
+    </div>
+        <p><br><br></p> 
+       
+        <footer>
+            <p>Βασιλική Σταύρου<br></p>
+            <p>mai22068@uom.edu.gr</p>  
+                    
+        </footer>  
+
+        <script src="uomTrack.js"></script>
+        
+        
+      
+    </body>
+</html>

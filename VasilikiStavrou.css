@@ -1,0 +1,119 @@
+*{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+
+body {
+  padding: 2em;
+  font-size: 1.2em;
+  font-family: Helvetica;
+  -webkit-font-smoothing: antialiased;
+  background: rgba( 71, 147, 227, 1);
+}
+
+
+.add-button {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  background-color: #4FC3A1;
+}
+
+
+.table-wrapper{
+    margin: 10px 70px 70px;
+    box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+}
+
+.uomTrack{
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    zoom: 120%;
+    white-space: nowrap;
+    background-color: white;
+}
+
+
+.uomTrack td {
+    text-align: center;
+    padding: 8px;
+    border-right: 1px solid #f8f8f8;
+    font-size: 12px;
+    }
+
+.uomTrack thead th {
+    text-align: center;
+    padding: 9px;
+    font-size: 14px;
+    color: #ffffff;
+    background: #4FC3A1;
+}
+
+
+.header {
+  font-size: 93%;
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  text-align:justify;
+
+}
+
+.title{
+  margin-left: 4.5em;
+}
+
+tfoot{
+    text-align: left;
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(54, 12, 12);
+}
+
+footer {
+background-color: rgba(231, 224, 224, 0.904);
+position:relative; 
+width: 100%;
+height: 70px;
+padding-top: -90px;
+margin-bottom: -50px;
+
+}
+
+#checkbox_div{
+  width: 30%;
+  background-color:#ab68b1;
+}
+
+input
+{
+  float: left;
+  display: block;
+}
+
+#buttonBest{
+  height: 30px;
+  background-color: #b187b4;
+  font-size: medium;
+}
+
+#buttonAll{
+  height: 30px;
+  font-size: medium;
+  background-color: #b187b4;
+  display: none;
+}
+
+.save {
+  display: none;
+}
+
+
+

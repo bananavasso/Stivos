@@ -5,7 +5,7 @@ self.addEventListener('install', function (event) {
                 '/VasilikiStavrou.html',
                 '/VasilikiStavrou.css',
                 '/uomTrack.js',
-                '/install.js'
+                '/index.js'
             ]);
         })
     );
